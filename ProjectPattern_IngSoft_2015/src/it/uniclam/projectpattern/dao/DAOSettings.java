@@ -1,4 +1,4 @@
-package it.uniclam.esercizio20102015.dao;
+package it.uniclam.projectpattern.dao;
 
 import java.sql.DriverManager;
 import java.sql.SQLException;

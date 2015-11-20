@@ -1,4 +1,4 @@
-package it.uniclam.esercizio20102015.gui;
+package it.uniclam.projectpattern.gui;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -18,25 +18,24 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import it.uniclam.esercizio20102015.ClientMainGUI;
-import it.uniclam.esercizio20102015.ServerMain;
+import it.uniclam.projectpattern.ClientMainGUI;
+import it.uniclam.projectpattern.ServerMain;
 
-public class CercaAmiciPanel extends JPanel {
+public class InserisciAmiciPanel extends JPanel {
+		
+	private JTextField cognome = new JTextField("cc", 20);
+	private JTextField nome = new JTextField("nn", 20);
+	private JTextField telefono = new JTextField("tt", 20);
+	private JTextField email = new JTextField("ee", 20);
 	
-	
-	private JTextField cognome = new JTextField("c", 20);
-	private JTextField nome = new JTextField("n", 20);
-	private JTextField telefono = new JTextField("t", 20);
-	private JTextField email = new JTextField("e", 20);
-	
-	private JButton cerca = new JButton("Cerca");
+	private JButton invia = new JButton("Inserisci");
 	private JButton clear = new JButton("Clear");
 	
 	private JTextArea ta = new JTextArea(12, 12);
 	
 	
 
-	public CercaAmiciPanel(ClientMainGUI clientGUI){ 
+	public InserisciAmiciPanel(ClientMainGUI clientGUI){
 		//JPanel pane = new JPanel(new GridBagLayout());
 
 		//Container pane = getContentPane();
@@ -45,6 +44,7 @@ public class CercaAmiciPanel extends JPanel {
 		GridBagConstraints c = new GridBagConstraints();
 		this.setLayout(new GridBagLayout());
 		
+			
 		
 		// Campo cognome
 		c.fill = GridBagConstraints.HORIZONTAL;
@@ -80,7 +80,7 @@ public class CercaAmiciPanel extends JPanel {
 		c.gridy = 2;
 		this.add(telefono, c);
 
-		// Campo email
+		// Campo telefono
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 0;
 		c.gridy = 3;
@@ -92,12 +92,12 @@ public class CercaAmiciPanel extends JPanel {
 		this.add(email, c);
 
 		
-		// Campo cerca
+		// Campo invia
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 0;
 		c.gridy = 4;
-		c.gridwidth = 4;   //2 columns wide
-		this.add(cerca, c);
+		c.gridwidth = 5;   //2 columns wide
+		this.add(invia, c);
 		
 		// Campo clear
 		c.fill = GridBagConstraints.HORIZONTAL;
@@ -113,12 +113,10 @@ public class CercaAmiciPanel extends JPanel {
 		c.gridwidth = 4;   //2 columns wide
 		this.add(new JLabel("Risposta:"), c);
 		
-		
-		
 		// Campo risposta
 		c.fill = GridBagConstraints.HORIZONTAL;
 		c.gridx = 0;
-		c.gridy = 	6;
+		c.gridy = 6;
 		c.gridwidth = 8;   //2 columns wide
 		JScrollPane jp = new JScrollPane(ta);
 		this.add(jp, c);
@@ -131,7 +129,7 @@ public class CercaAmiciPanel extends JPanel {
 		});
 		
 		
-		cerca.addActionListener(new ActionListener() {
+		invia.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -141,8 +139,8 @@ public class CercaAmiciPanel extends JPanel {
 					BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
 					PrintWriter out = new PrintWriter(s.getOutputStream(), true);
 					
-					String req = 
-							ServerMain.QUERY_AMICI + "\n" + 
+					
+					String req = ServerMain.INSERT_AMICI + "\n" + 
 							"cognome:" + cognome.getText() + "\n" + 
 							"nome:" + nome.getText() + "\n" + 
 							"telefono:" + telefono.getText() + "\n" + 
@@ -152,7 +150,7 @@ public class CercaAmiciPanel extends JPanel {
 					out.println(req);
 					//System.out.println("Inviato: " + req);
 					String line = in.readLine();
-					if (line.equalsIgnoreCase(ServerMain.OK)){
+					if (line.equalsIgnoreCase("OK")){
 						line = in.readLine();
 						while(line.length() > 0){
 							ta.append(line + "\n");
@@ -164,7 +162,7 @@ public class CercaAmiciPanel extends JPanel {
 					}
 					s.close();
 				} catch (IOException ioe){
-					JOptionPane.showMessageDialog(CercaAmiciPanel.this, "Error in communication with server!", "Error", JOptionPane.ERROR_MESSAGE);
+					JOptionPane.showMessageDialog(InserisciAmiciPanel.this, "Error in communication with server!", "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});

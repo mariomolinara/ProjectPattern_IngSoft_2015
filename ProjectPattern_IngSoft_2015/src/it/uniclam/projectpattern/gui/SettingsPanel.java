@@ -1,4 +1,4 @@
-package it.uniclam.esercizio20102015.gui;
+package it.uniclam.projectpattern.gui;
 
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
@@ -18,8 +18,8 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
-import it.uniclam.esercizio20102015.ClientMainGUI;
-import it.uniclam.esercizio20102015.ServerMain;
+import it.uniclam.projectpattern.ClientMainGUI;
+import it.uniclam.projectpattern.ServerMain;
 
 public class SettingsPanel extends JPanel {
 	

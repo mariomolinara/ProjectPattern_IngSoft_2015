@@ -1,6 +1,6 @@
-package it.uniclam.esercizio20102015.dao;
+package it.uniclam.projectpattern.dao;
 
-import it.uniclam.esercizio20102015.entity.Prestito;
+import it.uniclam.projectpattern.entity.Prestito;
 
 public class PrestitoDAOImpl implements PrestitoDAO {
 

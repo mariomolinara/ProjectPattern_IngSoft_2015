@@ -1,4 +1,4 @@
-package it.uniclam.esercizio20102015.entity;
+package it.uniclam.projectpattern.entity;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package it.uniclam.esercizio20102015;
+package it.uniclam.projectpattern;
 
 import java.awt.BorderLayout;
 import java.awt.Container;
@@ -26,10 +26,10 @@ import javax.swing.JTextField;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
-import it.uniclam.esercizio20102015.gui.CercaAmiciPanel;
-import it.uniclam.esercizio20102015.gui.InserisciAmiciPanel;
-import it.uniclam.esercizio20102015.gui.NavigationPanel;
-import it.uniclam.esercizio20102015.gui.SettingsPanel;
+import it.uniclam.projectpattern.gui.CercaAmiciPanel;
+import it.uniclam.projectpattern.gui.InserisciAmiciPanel;
+import it.uniclam.projectpattern.gui.NavigationPanel;
+import it.uniclam.projectpattern.gui.SettingsPanel;
 
 public class ClientMainGUI extends JFrame {
 	

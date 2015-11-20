@@ -1,8 +1,8 @@
-package it.uniclam.esercizio20102015.dao;
+package it.uniclam.projectpattern.dao;
 
 import java.util.List;
 
-import it.uniclam.esercizio20102015.entity.Amico;
+import it.uniclam.projectpattern.entity.Amico;
 
 public interface AmicoDAO {
 

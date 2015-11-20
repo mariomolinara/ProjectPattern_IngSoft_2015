@@ -1,4 +1,4 @@
-package it.uniclam.esercizio20102015.dao;
+package it.uniclam.projectpattern.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -6,7 +6,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import it.uniclam.esercizio20102015.entity.Amico;
+import it.uniclam.projectpattern.entity.Amico;
 
 public class AmicoDAOImpl implements AmicoDAO {
 

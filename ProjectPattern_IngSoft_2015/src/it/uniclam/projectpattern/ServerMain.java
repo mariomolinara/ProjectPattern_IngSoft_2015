@@ -1,4 +1,4 @@
-package it.uniclam.esercizio20102015;
+package it.uniclam.projectpattern;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -13,10 +13,10 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
-import it.uniclam.esercizio20102015.dao.AmicoDAOImpl;
-import it.uniclam.esercizio20102015.dao.DAOException;
-import it.uniclam.esercizio20102015.dao.DAOSettings;
-import it.uniclam.esercizio20102015.entity.Amico;
+import it.uniclam.projectpattern.dao.AmicoDAOImpl;
+import it.uniclam.projectpattern.dao.DAOException;
+import it.uniclam.projectpattern.dao.DAOSettings;
+import it.uniclam.projectpattern.entity.Amico;
 
 
 

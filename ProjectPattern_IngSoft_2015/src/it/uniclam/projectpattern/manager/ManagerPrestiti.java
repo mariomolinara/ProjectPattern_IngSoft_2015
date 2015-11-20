@@ -1,12 +1,12 @@
-package it.uniclam.esercizio20102015.manager;
+package it.uniclam.projectpattern.manager;
 
 import java.util.Date;
 
-import it.uniclam.esercizio20102015.dao.DAOSettings;
-import it.uniclam.esercizio20102015.dao.PrestitoDAOImpl;
-import it.uniclam.esercizio20102015.entity.Amico;
-import it.uniclam.esercizio20102015.entity.Prestito;
-import it.uniclam.esercizio20102015.entity.Prodotto;
+import it.uniclam.projectpattern.dao.DAOSettings;
+import it.uniclam.projectpattern.dao.PrestitoDAOImpl;
+import it.uniclam.projectpattern.entity.Amico;
+import it.uniclam.projectpattern.entity.Prestito;
+import it.uniclam.projectpattern.entity.Prodotto;
 
 /**
  * @author mario
