@@ -101,6 +101,8 @@ public class ServerMain {
 				
 				
 				
+				
+				
 				s.close();
 			} else if (command.equals(INSERT_AMICI)){
 				// TODO: Inserimento in database
