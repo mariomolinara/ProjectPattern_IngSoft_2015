@@ -7,6 +7,7 @@ public class Amico {
 	private String email = "";
 	
 	
+	
 	public Amico(String nome, String cognome, String telefono, String email){
 		this.nome = nome;
 		this.cognome = cognome;
